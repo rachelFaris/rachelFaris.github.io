@@ -1,0 +1,213 @@
+/* 
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Source Code Pro', monospace;
+ */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: rgb(27, 54, 94);
+  margin: 0 auto;
+}
+
+/* nav styles */
+
+nav li {
+  display: inline;
+  list-style: none;
+}
+
+nav a {
+  font-family: "Nunito Sans", sans-serif;
+  text-decoration: none;
+  color: rgb(193, 194, 205);
+  letter-spacing: 0.13rem;
+}
+
+nav a:hover {
+  background-color: rgb(42, 64, 97);
+}
+
+span.link-letter {
+  font-family: "Orbitron", sans-serif;
+  text-decoration: none;
+  color: #39f9f5;
+  padding-right: 0.5rem;
+}
+
+li.logo {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  color: #39f9f5;
+  letter-spacing: -0.8rem;
+}
+
+li.links {
+  float: right;
+  margin: 1rem 2rem;
+}
+
+/* main-container styles: */
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin-top: 5rem;
+  height: auto;
+}
+
+.div-info {
+  display: flex;
+  /* align-items: center; */
+}
+
+.main-info {
+  /* background-color: #3634b5; */
+  color: silver;
+  /* width: 80%; */
+}
+
+/* animation styles: */
+
+.avatar {
+  width: 40%;
+  height: auto;
+  border: solid 1px #39f9f5;
+  border-radius: 50%;
+  /* background-color: rgb(193, 194, 205); */
+  /* background-color: rgb(27, 54, 94); */
+}
+
+#cf3 {
+  position: relative;
+}
+
+#cf3 img {
+  position: absolute;
+  right: 0;
+  margin-right: 4rem;
+}
+
+.second-bottom {
+  z-index: -1;
+}
+
+@keyframes cf3FadeInOut {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+}
+
+#cf3 img.top {
+  animation-name: cf3FadeInOut;
+  animation-delay: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+
+@keyframes cf3FadeIn {
+  0% {
+    z-index: 1;
+  }
+}
+
+#cf3 img.second-bottom {
+  animation-name: cf3FadeIn;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+}
+
+/* main text styles: */
+
+h1 {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 5rem;
+  color: white;
+}
+
+h2 {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 3rem;
+  color: rgb(193, 194, 205);
+}
+
+p.hello {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.1rem;
+  color: #39f9f5;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+p.specialize {
+  font-family: "Nunito Sans", sans-serif;
+  letter-spacing: 0.1rem;
+  color: rgb(193, 194, 205);
+  margin-top: 2rem;
+}
+
+.andAnd {
+  color: #39f9f5;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+/* button style */
+
+a.projects-button {
+  margin-top: 2rem;
+  font-family: "Orbitron", sans-serif;
+  text-decoration: none;
+  color: #39f9f5;
+  letter-spacing: 0.13rem;
+  padding: 1rem;
+  border: 1px solid #39f9f5;
+  display: inline-block;
+  font-size: 0.85rem;
+  border-radius: 0.3rem;
+}
+
+a.projects-button:hover {
+  background-color: rgb(42, 64, 97);
+}
+
+@media screen and (max-width: 600px) {
+  nav li {
+    display: block;
+  }
+  li.links {
+    float: none;
+    margin: 0;
+  }
+  .avatar {
+    display: none;
+  }
+  #cf3 img.top {
+    animation-iteration-count: 1;
+  }
+  .main-container {
+    display: block;
+    width: 80%;
+    margin-left: 2rem;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  a.projects-button {
+    text-align: center;
+  }
+}
