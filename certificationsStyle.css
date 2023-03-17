@@ -1,0 +1,233 @@
+/* * {
+  border: 1px solid white;
+} */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+
+  background-color: rgb(27, 54, 94);
+  margin: 0 auto;
+  font-family: "Nunito Sans", sans-serif;
+}
+nav li {
+  display: inline;
+  list-style: none;
+}
+
+nav a {
+  font-family: "Nunito Sans", sans-serif;
+  text-decoration: none;
+  color: rgb(193, 194, 205);
+  letter-spacing: 0.13rem;
+}
+
+nav a:hover {
+  background-color: rgb(42, 64, 97);
+}
+
+span.link-letter {
+  font-family: "Orbitron", sans-serif;
+  text-decoration: none;
+  color: #39f9f5;
+  padding-right: 0.5rem;
+}
+
+p.logo {
+  margin: 1rem 0 0 2.5rem;
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  color: #39f9f5;
+  letter-spacing: -0.8rem;
+}
+
+li.links {
+  float: right;
+  margin: 1rem 2rem;
+}
+
+header {
+  /* grid-column: 1 / 3; */
+  grid-column: 1 / 2;
+  grid-row: 1;
+
+  /* background-color: lightblue; */
+}
+
+nav {
+  grid-column: 2 / 4;
+  grid-row: 1;
+
+  /* background-color: lightcyan; */
+}
+
+article {
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+}
+
+.skills-icon {
+  text-align: center;
+}
+
+i {
+  margin: 1rem 3rem 0 3rem;
+  font-size: 2.5rem;
+  color: #39f9f5;
+
+  animation-duration: 2s;
+  animation-name: colors;
+  /* animation-iteration-count: infinite; */
+}
+
+colors {
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+}
+
+@keyframes colors {
+  0% {
+    color: #eff939;
+    /* color: #f9f239; */
+  }
+  10% {
+    color: #dff939;
+  }
+  20% {
+    color: #cff939;
+    /* color: #b9f939; */
+  }
+  30% {
+    color: #b9f939;
+  }
+  40% {
+    color: #93f939;
+    /* color: #63f939; */
+  }
+  50% {
+    color: #73f939;
+  }
+  60% {
+    color: #53f939;
+    /* color: #39f976; */
+  }
+  70% {
+    color: #39f97f;
+  }
+  80% {
+    color: #39f9af;
+    /* color: #39f9cc; */
+  }
+  90% {
+    color: #39f9d6;
+  }
+  100% {
+    color: #39f9f5;
+    /* color: #39f9f5; */
+  }
+}
+
+main {
+  grid-column: 1 / 4;
+  grid-row: 3 / 10;
+}
+
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+}
+
+div a {
+  text-decoration: none;
+}
+
+section {
+  margin: 2rem;
+  width: 360px;
+  height: 280px;
+}
+
+.certification-one,
+.certification-two,
+.certification-three,
+.certification-four,
+.certification-five,
+.certification-six {
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* overflow: scroll; */
+  border: 2px solid #39f9f5;
+}
+
+.certification-four,
+.certification-five,
+.certification-six {
+  box-shadow: 0 0 0 150px rgba(27, 54, 94, 0.6) inset;
+}
+
+.certification-one {
+  background-image: url(images/jsCert.jpg);
+}
+
+.certification-two {
+  background-image: url(images/clCert.jpg);
+}
+
+.certification-three {
+  background-image: url(images/htmlCert.jpg);
+}
+
+.certification-four {
+  background-image: url(images/FEEcert.jpg);
+}
+
+.certification-five {
+  background-image: url(images/jsCert2.jpg);
+}
+
+.certification-six {
+  background-image: url(images/gitCert.jpg);
+}
+
+.progress {
+  margin: 1.5rem 0 7rem 1rem;
+  color: #39f9f5;
+  font-size: 2rem;
+}
+
+progress::-webkit-progress-value {
+  background: #39f9f5;
+}
+
+.FEE-progress,
+.JS-progress,
+.GH-progress {
+  margin: 1.5rem 0 0 1rem;
+  height: 50px;
+  width: 90%;
+  border: 1px solid #39f9f5;
+}
+
+.site-link {
+  text-decoration: none;
+  color: #39f9f5;
+  font-size: 1.5rem;
+  display: block;
+}
+
+.right-align {
+  text-align: right;
+}
+
+footer {
+  grid-column: 1 / 4;
+  grid-row: 11;
+}
