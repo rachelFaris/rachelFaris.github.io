@@ -161,16 +161,17 @@ section {
 .certification-three,
 .certification-four,
 .certification-five,
-.certification-six {
+.certification-six,
+.certification-seven {
   background-size: cover;
   background-repeat: no-repeat;
   /* overflow: scroll; */
   border: 2px solid #39f9f5;
 }
 
-.certification-four,
 .certification-five,
-.certification-six {
+.certification-six,
+.certification-seven {
   box-shadow: 0 0 0 150px rgba(27, 54, 94, 0.6) inset;
 }
 
@@ -187,14 +188,17 @@ section {
 }
 
 .certification-four {
-  background-image: url(images/FEEcert.jpg);
+  background-image: url(images/cssCert.jpg);
 }
 
 .certification-five {
-  background-image: url(images/jsCert2.jpg);
+  background-image: url(images/FEEcert.jpg);
 }
 
 .certification-six {
+  background-image: url(images/jsCert2.jpg);
+}
+.certification-seven {
   background-image: url(images/gitCert.jpg);
 }
 
