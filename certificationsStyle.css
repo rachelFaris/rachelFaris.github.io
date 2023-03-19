@@ -82,7 +82,7 @@ i {
   font-size: 2.5rem;
   color: #39f9f5;
 
-  animation-duration: 2.5s;
+  animation-duration: 3s;
   animation-name: colors;
   /* animation-iteration-count: infinite; */
 }
@@ -240,6 +240,10 @@ footer p {
 }
 
 @media screen and (max-width: 900px) {
+  nav {
+    grid-column: 3;
+    margin-left: 5rem;
+  }
   nav li {
     display: block;
     margin: 0.5rem 0;
@@ -259,12 +263,7 @@ footer p {
   }
   .progress {
     margin: 1rem 0 6rem 1rem;
-    color: #39f9f5;
     font-size: 1.5rem;
-  }
-
-  progress::-webkit-progress-value {
-    background: #39f9f5;
   }
 
   .FEE-progress,

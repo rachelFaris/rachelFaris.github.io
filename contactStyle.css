@@ -11,7 +11,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  grid-auto-rows: minmax(90px, auto);
+  grid-auto-rows: minmax(100px, auto);
 
   background-color: rgb(27, 54, 94);
   margin: 0 auto;
@@ -70,7 +70,7 @@ li.links {
   text-decoration: none;
   margin: 0 4rem 0 0;
 
-  animation-duration: 2.5s;
+  animation-duration: 3s;
   animation-name: opacity;
 }
 
@@ -179,6 +179,7 @@ footer p {
 @media screen and (max-width: 900px) {
   nav {
     grid-column: 3;
+    margin-left: 5rem;
   }
   nav li {
     display: block;
@@ -221,6 +222,3 @@ footer p {
 /* * {
   border: 1px solid white;
 } */
-
-@media screen and (max-width: 640px) {
-}

@@ -247,15 +247,6 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
-  nav li {
-    display: block;
-    margin: 0.5rem 0;
-  }
-  li.links {
-    float: none;
-    margin: 1rem 0;
-  }
-
   section {
     position: relative;
     margin-top: 0;
