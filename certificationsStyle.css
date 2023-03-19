@@ -21,7 +21,8 @@ nav li {
   list-style: none;
 }
 
-nav a {
+nav a,
+footer p {
   font-family: "Nunito Sans", sans-serif;
   text-decoration: none;
   color: rgb(193, 194, 205);
@@ -81,7 +82,7 @@ i {
   font-size: 2.5rem;
   color: #39f9f5;
 
-  animation-duration: 2s;
+  animation-duration: 2.5s;
   animation-name: colors;
   /* animation-iteration-count: infinite; */
 }
@@ -229,5 +230,86 @@ progress::-webkit-progress-value {
 
 footer {
   grid-column: 1 / 4;
-  grid-row: 11;
+  grid-row: auto;
+  margin-top: 3rem;
+}
+
+footer p {
+  margin: -1rem 2rem;
+  float: right;
+}
+
+@media screen and (max-width: 900px) {
+  nav li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  li.links {
+    float: none;
+    margin: 1rem 0;
+  }
+  section {
+    margin: 2rem;
+    width: 300px;
+    height: 220px;
+  }
+  i {
+    margin: 1.5rem 2rem 0 2rem;
+    font-size: 2;
+  }
+  .progress {
+    margin: 1rem 0 6rem 1rem;
+    color: #39f9f5;
+    font-size: 1.5rem;
+  }
+
+  progress::-webkit-progress-value {
+    background: #39f9f5;
+  }
+
+  .FEE-progress,
+  .JS-progress,
+  .GH-progress {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  section {
+    margin: 2rem;
+    width: 250px;
+    height: 200px;
+  }
+  .progress {
+    margin: 1rem 0 5rem 1rem;
+    color: #39f9f5;
+    font-size: 1.5rem;
+  }
+}
+
+/* * {
+  border: 1px solid white;
+} */
+
+@media screen and (max-width: 640px) {
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  section {
+    margin: 2rem;
+    width: 220px;
+    height: 170px;
+  }
+
+  i {
+    margin: 1.5rem 1rem 0 2rem;
+    font-size: 2;
+  }
+  .progress {
+    margin: 1rem 0 3.5rem 1rem;
+    color: #39f9f5;
+    font-size: 1.5rem;
+  }
 }

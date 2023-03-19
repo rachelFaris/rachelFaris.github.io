@@ -1,26 +1,40 @@
-/* 
-font-family: 'Nunito Sans', sans-serif;
-font-family: 'Orbitron', sans-serif;
-font-family: 'Source Code Pro', monospace;
- */
+/* * {
+  border: 1px solid white;
+} */
 
 html {
   font-size: 16px;
 }
 
+/* non-grid: */
+/* 
 body {
+  background-color: rgb(27, 54, 94);
+  margin: 0 auto;
+} */
+
+body {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: minmax(100px, auto);
+
   background-color: rgb(27, 54, 94);
   margin: 0 auto;
 }
 
 /* nav styles */
+nav {
+  grid-column: 1 / 7;
+  grid-row: 1;
+}
 
 nav li {
   display: inline;
   list-style: none;
 }
 
-nav a {
+nav a,
+footer p {
   font-family: "Nunito Sans", sans-serif;
   text-decoration: none;
   color: rgb(193, 194, 205);
@@ -52,22 +66,21 @@ li.links {
 
 /* main-container styles: */
 
-.main-container {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+section {
+  /* position: static; */
+  grid-column: 1 / 3;
+  grid-row: 2;
+
   margin-top: 5rem;
-  height: auto;
 }
 
-.div-info {
-  display: flex;
-  /* align-items: center; */
+main {
+  grid-column: 3 / 6;
+  grid-row: 5 / auto;
 }
 
 .main-info {
-  /* background-color: #3634b5; */
   color: silver;
-  /* width: 80%; */
 }
 
 /* animation styles: */
@@ -81,11 +94,11 @@ li.links {
   /* background-color: rgb(27, 54, 94); */
 }
 
-#cf3 {
+.cf3 {
   position: relative;
 }
 
-#cf3 img {
+.cf3 img {
   position: absolute;
   right: 0;
   margin-right: 4rem;
@@ -104,7 +117,7 @@ li.links {
   }
 }
 
-#cf3 img.top {
+.cf3 img.top {
   animation-name: cf3FadeInOut;
   animation-delay: 4s;
   animation-timing-function: ease-in-out;
@@ -118,7 +131,7 @@ li.links {
   }
 }
 
-#cf3 img.second-bottom {
+.cf3 img.second-bottom {
   animation-name: cf3FadeIn;
   animation-delay: 1s;
   animation-timing-function: ease-in-out;
@@ -182,24 +195,40 @@ a.projects-button:hover {
   background-color: rgb(42, 64, 97);
 }
 
-@media screen and (max-width: 600px) {
+footer {
+  position: absolute;
+  bottom: -6.5rem;
+  right: 1rem;
+  height: 50px;
+  top: 700px;
+}
+
+@media screen and (max-width: 900px) {
   nav li {
     display: block;
+    margin: 0.5rem 0;
   }
   li.links {
     float: none;
-    margin: 0;
+    margin: 1rem 0;
+  }
+
+  section {
+    position: relative;
+    margin-top: 0;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
   }
   .avatar {
-    display: none;
+    width: 50%;
   }
-  #cf3 img.top {
-    animation-iteration-count: 1;
-  }
-  .main-container {
-    display: block;
-    width: 80%;
-    margin-left: 2rem;
+
+  main {
+    position: relative;
+    top: 12rem;
+    left: -4rem;
+    grid-column: 3 / 6;
+    grid-row: 4;
   }
   h1 {
     font-size: 4rem;
@@ -209,5 +238,111 @@ a.projects-button:hover {
   }
   a.projects-button {
     text-align: center;
+  }
+  footer {
+    position: absolute;
+    top: 800px;
+    right: 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  nav li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  li.links {
+    float: none;
+    margin: 1rem 0;
+  }
+
+  section {
+    position: relative;
+    margin-top: 0;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+  }
+  .avatar {
+    width: 50%;
+  }
+
+  main {
+    position: relative;
+    top: 12rem;
+    left: -4rem;
+    grid-column: 3 / 6;
+    grid-row: 4;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+
+  footer {
+    top: 850px;
+  }
+}
+
+/* * {
+  border: 1px solid white;
+} */
+
+@media screen and (max-width: 600px) {
+  section {
+    grid-column: 4;
+    margin: 1rem 0 0 3rem;
+  }
+
+  .avatar {
+    width: 90px;
+  }
+
+  main {
+    position: relative;
+    top: 8rem;
+    left: -1rem;
+    width: 300px;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  a.projects-button {
+    text-align: center;
+  }
+  a.projects-button {
+    margin-top: 1rem;
+  }
+
+  footer {
+    position: absolute;
+    bottom: -10.5rem;
+    right: 1rem;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  main {
+    position: relative;
+    top: 8rem;
+    left: 0.5rem;
+    width: 250px;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  a.projects-button {
+    text-align: center;
+  }
+  a.projects-button {
+    margin-top: 0.5rem;
+    margin-left: -1rem;
   }
 }

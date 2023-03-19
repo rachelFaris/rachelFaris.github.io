@@ -22,7 +22,8 @@ nav li {
   list-style: none;
 }
 
-nav a {
+nav a,
+footer p {
   font-family: "Nunito Sans", sans-serif;
   text-decoration: none;
   color: rgb(193, 194, 205);
@@ -247,6 +248,78 @@ border-thick {
 }
 
 footer {
-  grid-column: 1 / 4;
+  grid-column: 3;
   grid-row: 7;
+  margin: 2rem 1rem 0 0;
+}
+
+footer p {
+  float: right;
+}
+
+@media screen and (max-width: 900px) {
+  nav li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  li.links {
+    float: none;
+    margin: 1rem 0;
+  }
+  section {
+    margin: 2rem;
+    width: 300px;
+    height: 300px;
+  }
+  .project-one:hover h2,
+  .project-two:hover h2,
+  .project-three:hover h2,
+  .project-four:hover h2,
+  .project-five:hover h2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  .project-one:hover p,
+  .project-two:hover p,
+  .project-three:hover p,
+  .project-four:hover p,
+  .project-five:hover p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  section {
+    margin: 2rem;
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* * {
+  border: 1px solid white;
+} */
+
+@media screen and (max-width: 640px) {
+  section {
+    margin: 2rem;
+    width: 220px;
+    height: 220px;
+  }
+  .project-one:hover h2,
+  .project-two:hover h2,
+  .project-three:hover h2,
+  .project-four:hover h2,
+  .project-five:hover h2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+  .project-one:hover p,
+  .project-two:hover p,
+  .project-three:hover p,
+  .project-four:hover p,
+  .project-five:hover p {
+    font-size: 1rem;
+  }
 }
