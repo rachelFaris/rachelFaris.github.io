@@ -1,17 +1,6 @@
-/* * {
-  border: 1px solid white;
-} */
-
 html {
   font-size: 16px;
 }
-
-/* non-grid: */
-/* 
-body {
-  background-color: rgb(27, 54, 94);
-  margin: 0 auto;
-} */
 
 body {
   display: grid;
@@ -67,10 +56,8 @@ li.links {
 /* main-container styles: */
 
 section {
-  /* position: static; */
   grid-column: 1 / 3;
   grid-row: 2;
-
   margin-top: 5rem;
 }
 
@@ -90,8 +77,6 @@ main {
   height: auto;
   border: solid 1px #39f9f5;
   border-radius: 50%;
-  /* background-color: rgb(193, 194, 205); */
-  /* background-color: rgb(27, 54, 94); */
 }
 
 .cf3 {
@@ -275,10 +260,6 @@ footer {
     top: 850px;
   }
 }
-
-/* * {
-  border: 1px solid white;
-} */
 
 @media screen and (max-width: 600px) {
   section {
