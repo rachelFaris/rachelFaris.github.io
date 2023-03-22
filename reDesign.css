@@ -1,0 +1,375 @@
+/* * {
+  border: 1px solid white;
+} */
+
+html {
+  font-size: 16px;
+  background-color: #39f9f5;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: minmax(100px, auto);
+
+  /* background-color: rgb(27, 54, 94); */
+  background: linear-gradient(rgb(6, 8, 72), rgb(57, 249, 245));
+  height: 100vh;
+  margin: 0 auto;
+}
+
+/* nav styles */
+nav {
+  grid-column: 1 / 13;
+  grid-row: 1;
+}
+
+nav li {
+  display: inline;
+  list-style: none;
+}
+
+nav a,
+footer p {
+  font-family: "Nunito Sans", sans-serif;
+  text-decoration: none;
+  /* color: rgb(193, 194, 205); */
+  /* color: #39f9f5; */
+  color: white;
+  letter-spacing: 0.13rem;
+}
+
+nav a:hover {
+  background-color: rgb(42, 64, 97);
+}
+
+span.link-letter {
+  font-family: "Orbitron", sans-serif;
+  text-decoration: none;
+  color: #39f9f5;
+  padding-right: 0.5rem;
+}
+
+li.logo {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  color: #39f9f5;
+  letter-spacing: -0.8rem;
+}
+
+li.links {
+  float: right;
+  margin: 1rem 2rem;
+}
+
+/* main-container styles: */
+
+section {
+  /* grid-column: 1 / 3; */
+  grid-column: 10 / 12;
+  grid-row: 2;
+
+  /* padding: 0 10rem 0 0; */
+  margin-top: 1rem;
+}
+
+main {
+  grid-column: 3 / 8;
+  /* background-image: linear-gradient(rgb(57, 249, 245), rgb(6, 8, 72)); */
+  /* background-clip: text; */
+  /* -webkit-background-clip: text; */
+  /* color: transparent; */
+
+  grid-row: 2 / auto;
+  margin-top: 1rem;
+  /* margin: 0 5rem 0 0; */
+}
+
+/* div.projects {
+  grid-column: 4 / 6;
+  grid-row: 6; */
+/* margin: -12.3rem 0 0 1rem; */
+/* margin: -1rem 0 0 -7rem;
+} */
+
+.main-info {
+  margin-left: 8rem;
+  text-align: right;
+  color: silver;
+}
+
+/* animation styles: */
+
+.avatar {
+  width: 80%;
+  height: auto;
+  border: solid 1px #39f9f5;
+  border-radius: 50%;
+}
+
+.cf3 {
+  position: relative;
+}
+
+.cf3 img {
+  position: absolute;
+  right: 0;
+  margin-right: 13rem;
+}
+
+.second-bottom {
+  z-index: -1;
+}
+
+@keyframes cf3FadeInOut {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+}
+
+.cf3 img.top {
+  animation-name: cf3FadeInOut;
+  animation-delay: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+
+@keyframes cf3FadeIn {
+  0% {
+    z-index: 1;
+  }
+}
+
+.cf3 img.second-bottom {
+  animation-name: cf3FadeIn;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+}
+
+/* main text styles: */
+
+h1 {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 5rem;
+  /* color: #39f9f5; */
+  /* color: rgb(6, 8, 72); */
+  /* color: transparent; */
+  color: white;
+  /* float: right; */
+}
+
+h2 {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 3rem;
+  color: rgb(6, 8, 72);
+  line-height: 2.6rem;
+  /* color: transparent; */
+  /* color: rgb(193, 194, 205); */
+  /* float: right; */
+}
+
+p.hello {
+  text-align: right;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.1rem;
+  /* color: rgb(6, 8, 72); */
+  /* color: transparent; */
+  color: #39f9f5;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+p.specialize {
+  font-family: "Nunito Sans", sans-serif;
+  letter-spacing: 0.1rem;
+  color: rgb(6, 8, 72);
+  font-weight: 600;
+  font-size: 1.1rem;
+  /* color: transparent; */
+  /* color: rgb(193, 194, 205); */
+  margin-top: 2rem;
+  /* float: right; */
+}
+
+.andAnd {
+  color: white;
+  /* color: #39f9f5; */
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+/* button style */
+div.projects {
+  grid-column: 9 / 12;
+  grid-row: 3;
+  margin: -11rem 0 0 -2.3rem;
+}
+
+a.projects-button {
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: "Orbitron", sans-serif;
+  text-decoration: none;
+  letter-spacing: 0.13rem;
+  color: rgb(6, 8, 72);
+  padding: 1rem;
+  border: 2px solid rgb(6, 8, 72);
+  /* border: 1px solid #39f9f5; */
+  display: inline-block;
+  border-radius: 0.3rem;
+}
+
+a.projects-button:hover {
+  background-color: rgb(42, 64, 97);
+}
+
+footer {
+  background-color: #39f9f5;
+  position: absolute;
+  bottom: -6.5rem;
+  right: 1rem;
+  height: 50px;
+  top: 700px;
+}
+footer p {
+  color: rgb(6, 8, 72);
+}
+
+@media screen and (max-width: 900px) {
+  nav li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  li.links {
+    float: none;
+    margin: 1rem 0;
+  }
+
+  section {
+    position: relative;
+    margin-top: 0;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+  }
+  .avatar {
+    width: 50%;
+  }
+
+  main {
+    position: relative;
+    top: 12rem;
+    left: -4rem;
+    grid-column: 3 / 6;
+    grid-row: 4;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  a.projects-button {
+    text-align: center;
+  }
+  footer {
+    position: absolute;
+    top: 800px;
+    right: 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section {
+    position: relative;
+    margin-top: 0;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+  }
+  .avatar {
+    width: 50%;
+  }
+
+  main {
+    position: relative;
+    top: 12rem;
+    left: -4rem;
+    grid-column: 3 / 6;
+    grid-row: 4;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+
+  footer {
+    top: 850px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    grid-column: 4;
+    margin: 1rem 0 0 3rem;
+  }
+
+  .avatar {
+    width: 90px;
+  }
+
+  main {
+    position: relative;
+    top: 8rem;
+    left: -1rem;
+    width: 300px;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  a.projects-button {
+    text-align: center;
+  }
+  a.projects-button {
+    margin-top: 1rem;
+  }
+
+  footer {
+    position: absolute;
+    bottom: -10.5rem;
+    right: 1rem;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  main {
+    position: relative;
+    top: 8rem;
+    left: 0.5rem;
+    width: 250px;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  a.projects-button {
+    text-align: center;
+  }
+  a.projects-button {
+    margin-top: 0.5rem;
+    margin-left: -1rem;
+  }
+}
