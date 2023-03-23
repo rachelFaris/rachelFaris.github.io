@@ -8,7 +8,7 @@ body {
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 
-  background-color: rgb(27, 54, 94);
+  background: linear-gradient(rgb(6, 8, 72), rgb(57, 249, 245));
   margin: 0 auto;
   font-family: "Nunito Sans", sans-serif;
 }

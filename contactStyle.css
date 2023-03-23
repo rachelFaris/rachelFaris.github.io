@@ -3,13 +3,13 @@ html {
 }
 
 body {
-  color: white;
+  color: rgb(6, 8, 72);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
-
-  background-color: rgb(27, 54, 94);
+  background: linear-gradient(rgb(6, 8, 72), rgb(57, 249, 245));
+  /* background-color: rgb(27, 54, 94); */
   margin: 0 auto;
   font-family: "Nunito Sans", sans-serif;
 }
@@ -33,7 +33,7 @@ nav a,
 footer p {
   font-family: "Nunito Sans", sans-serif;
   text-decoration: none;
-  color: rgb(193, 194, 205);
+  color: white;
   letter-spacing: 0.13rem;
 }
 
