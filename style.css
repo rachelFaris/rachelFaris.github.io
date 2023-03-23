@@ -1,19 +1,32 @@
+/* * {
+  border: 1px solid white;
+} */
+
 html {
+  margin: 0;
   font-size: 16px;
+  /* background: linear-gradient(rgb(6, 8, 72), rgb(57, 249, 245));
+  height: 100vh; */
 }
 
 body {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: minmax(100px, auto);
 
-  background-color: rgb(27, 54, 94);
-  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap: 10px; */
+  grid-template-rows: repeat(6, 1fr);
+
+  /* grid-template-columns: repeat(6, 1fr); */
+  /* grid-template-rows: minmax(100px, auto); */
+
+  background: linear-gradient(rgb(6, 8, 72), rgb(57, 249, 245));
+  height: 100vh;
+  margin: 0;
 }
 
 /* nav styles */
 nav {
-  grid-column: 1 / 7;
+  grid-column: 1 / 4;
   grid-row: 1;
 }
 
@@ -26,12 +39,12 @@ nav a,
 footer p {
   font-family: "Nunito Sans", sans-serif;
   text-decoration: none;
-  color: rgb(193, 194, 205);
+  color: white;
   letter-spacing: 0.13rem;
 }
 
 nav a:hover {
-  background-color: rgb(42, 64, 97);
+  background-color: rgb(27, 57, 121);
 }
 
 span.link-letter {
@@ -56,14 +69,27 @@ li.links {
 /* main-container styles: */
 
 section {
-  grid-column: 1 / 3;
-  grid-row: 2;
-  margin-top: 5rem;
+  grid-column: 1 / 2;
+  grid-row: 3;
+  left: 15rem;
 }
 
 main {
-  grid-column: 3 / 6;
+  grid-column: 2 / 4;
+  /* background-image: linear-gradient(rgb(57, 249, 245), rgb(6, 8, 72)); */
+  /* background-clip: text; */
+  /* -webkit-background-clip: text; */
+  /* color: transparent; */
+
+  grid-row: 3 / auto;
+  text-align: left;
+  margin: -4rem 0 0 0;
+}
+
+div.projects {
+  grid-column: 2 / auto;
   grid-row: 5 / auto;
+  margin: -4rem 0 0 0;
 }
 
 .main-info {
@@ -85,8 +111,8 @@ main {
 
 .cf3 img {
   position: absolute;
-  right: 0;
-  margin-right: 4rem;
+  /* margin: 0 0 0 0.5rem; */
+  /* right: 0; */
 }
 
 .second-bottom {
@@ -127,36 +153,45 @@ main {
 /* main text styles: */
 
 h1 {
-  margin: 0;
+  margin: 1rem 0;
   font-family: "Nunito Sans", sans-serif;
   font-size: 5rem;
+  /* color: transparent; */
   color: white;
+  letter-spacing: 0.1rem;
 }
 
 h2 {
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
   font-size: 3rem;
-  color: rgb(193, 194, 205);
+  color: rgb(6, 8, 72);
+  line-height: 2.6rem;
+  /* color: transparent; */
 }
 
 p.hello {
+  display: inline-block;
   font-family: "Orbitron", sans-serif;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.15rem;
+  /* color: transparent; */
   color: #39f9f5;
-  margin: 0;
-  font-size: 0.9rem;
+  margin: 3rem 0 0 0;
+  font-size: 0.95rem;
 }
 
 p.specialize {
   font-family: "Nunito Sans", sans-serif;
   letter-spacing: 0.1rem;
-  color: rgb(193, 194, 205);
-  margin-top: 2rem;
+  color: rgb(6, 8, 72);
+  font-weight: 600;
+  font-size: 1.1rem;
+  /* color: transparent; */
+  margin: 2rem 0;
 }
 
 .andAnd {
-  color: #39f9f5;
+  color: white;
   font-size: 1.2rem;
   font-style: italic;
 }
@@ -164,31 +199,85 @@ p.specialize {
 /* button style */
 
 a.projects-button {
-  margin-top: 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
   font-family: "Orbitron", sans-serif;
   text-decoration: none;
-  color: #39f9f5;
   letter-spacing: 0.13rem;
+  background-color: white;
+  color: rgb(6, 8, 72);
   padding: 1rem;
-  border: 1px solid #39f9f5;
-  display: inline-block;
-  font-size: 0.85rem;
+  border: 2px solid rgb(6, 8, 72);
   border-radius: 0.3rem;
 }
 
 a.projects-button:hover {
-  background-color: rgb(42, 64, 97);
+  background-color: transparent;
 }
 
 footer {
-  position: absolute;
-  bottom: -6.5rem;
-  right: 1rem;
+  background-color: transparent;
+  grid-column: 3;
+  grid-row: 6;
+  text-align: right;
+  margin: 3rem 1rem 0 0;
   height: 50px;
-  top: 700px;
+}
+footer p {
+  color: white;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1250px) {
+  body {
+    display: grid;
+
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    /* height: 100vh; */
+    min-height: 800px;
+  }
+
+  section {
+    grid-column: 2 / 3;
+    grid-row: 2 / auto;
+  }
+
+  .avatar {
+    width: 25%;
+    height: auto;
+    border: solid 1px #39f9f5;
+    border-radius: 50%;
+  }
+
+  main {
+    grid-column: 2 / 3;
+
+    grid-row: 5 / auto;
+    text-align: left;
+    /* margin: -7rem 0 0 3rem; */
+  }
+  div.projects {
+    grid-column: 2 / 3;
+    grid-row: 7;
+    /* margin: -3rem 0 0 3rem; */
+  }
+  footer {
+    grid-row: 7;
+    /* background-color: transparent; */
+  }
+}
+@media screen and (max-width: 1000px) {
+  body {
+    display: grid;
+
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: minmax(100px, 200px);
+    min-height: 1000px;
+  }
+  nav {
+    grid-column: 1;
+    /* margin-left: 5rem; */
+  }
   nav li {
     display: block;
     margin: 0.5rem 0;
@@ -197,124 +286,162 @@ footer {
     float: none;
     margin: 1rem 0;
   }
-
   section {
-    position: relative;
-    margin-top: 0;
-    grid-column: 2 / 4;
-    grid-row: 2 / 3;
+    grid-column: 1;
+    grid-row: 2;
+    /* margin: 0 0 1rem 5rem; */
   }
+
   .avatar {
-    width: 50%;
+    width: 80%;
+    height: auto;
   }
 
   main {
-    position: relative;
-    top: 12rem;
-    left: -4rem;
-    grid-column: 3 / 6;
-    grid-row: 4;
+    grid-column: 2 / 4;
+
+    grid-row: 4 / auto;
+    text-align: left;
+    margin: -3rem 4rem 0 0;
   }
+  div.projects {
+    grid-column: 2 / 3;
+    grid-row: 8;
+    margin: -5rem 0 0 0;
+  }
+
+  footer {
+    grid-row: 9;
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  main {
+    margin: -2rem 3rem 0 0;
+  }
+
   h1 {
+    margin: 1rem 0;
     font-size: 4rem;
   }
+
   h2 {
-    font-size: 3rem;
+    margin: 0;
+    font-size: 2rem;
+  }
+  div.projects {
+    margin: -6rem 0 0 0;
   }
   a.projects-button {
-    text-align: center;
-  }
-  footer {
-    position: absolute;
-    top: 800px;
-    right: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 650px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10ch;
+    height: 100vh;
+  }
+
   section {
-    position: relative;
-    margin-top: 0;
-    grid-column: 2 / 4;
-    grid-row: 2 / 3;
-  }
-  .avatar {
-    width: 50%;
-  }
-
-  main {
-    position: relative;
-    top: 12rem;
-    left: -4rem;
-    grid-column: 3 / 6;
-    grid-row: 4;
-  }
-  h1 {
-    font-size: 3.5rem;
-  }
-  h2 {
-    font-size: 3rem;
-  }
-
-  footer {
-    top: 850px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  section {
-    grid-column: 4;
-    margin: 1rem 0 0 3rem;
+    grid-row: 3;
+    margin: -2rem 0 0 0;
   }
 
   .avatar {
-    width: 90px;
+    width: 35%;
+    height: auto;
   }
 
   main {
-    position: relative;
-    top: 8rem;
-    left: -1rem;
-    width: 300px;
-  }
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  a.projects-button {
+    grid-column: 1 / 4;
+    grid-row: 4 / auto;
+    margin: 0 2rem;
     text-align: center;
   }
-  a.projects-button {
-    margin-top: 1rem;
+  div.projects {
+    grid-column: 1 / 4;
+    grid-row: 6;
+    margin: -9rem auto 0 auto;
   }
 
   footer {
-    position: absolute;
-    bottom: -10.5rem;
-    right: 1rem;
+    grid-row: 6;
   }
 }
 
-@media screen and (max-width: 290px) {
-  main {
-    position: relative;
-    top: 8rem;
-    left: 0.5rem;
-    width: 250px;
+@media screen and (max-width: 500px) {
+  body {
+    height: auto;
   }
+  section {
+    grid-column: 1;
+    grid-row: 3;
+    margin: -2rem 0 0 0;
+  }
+
+  .avatar {
+    width: 45%;
+    height: auto;
+  }
+  div.projects {
+    grid-row: 6;
+    margin: -6rem auto 0 auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    /* margin: 0; */
+    height: auto;
+  }
+  main {
+    margin: -3rem 0 0 0;
+    text-align: right;
+  }
+
   h1 {
+    margin: 1rem 0;
     font-size: 3rem;
   }
+
   h2 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  div.projects {
+    text-align: right;
+    float: right;
+    margin: -6rem 2rem 0 0;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  body {
+    margin: 0;
+    height: auto;
+  }
+
+  main {
+    text-align: right;
+  }
+
+  h1 {
+    margin: 1rem 0;
     font-size: 2rem;
   }
-  a.projects-button {
-    text-align: center;
+
+  h2 {
+    margin: 0;
+    font-size: 1.5rem;
   }
-  a.projects-button {
-    margin-top: 0.5rem;
-    margin-left: -1rem;
+  div.projects {
+    text-align: right;
+    float: right;
+    margin: -5rem 2rem 0 0;
   }
 }
