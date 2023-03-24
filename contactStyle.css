@@ -3,7 +3,10 @@ html {
 }
 
 body {
-  color: rgb(6, 8, 72);
+  /* background-image: linear-gradient(rgb(57, 249, 245), rgb(6, 8, 72)); */
+  /* background-clip: text; */
+  /* -webkit-background-clip: text; */
+  /* color: transparent; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
@@ -111,6 +114,10 @@ opacity {
   }
 }
 
+/* h1 {
+  color: white;
+} */
+
 main {
   grid-column: 1 / 4;
   grid-row: 2 / auto;
@@ -135,6 +142,17 @@ main {
   font-size: 1.1rem;
   letter-spacing: 0.1rem;
   overflow: scroll;
+  max-height: 550px;
+}
+
+.about-section {
+  /* background: linear-gradient(rgb(57, 249, 245), rgb(6, 8, 72)); */
+  /* background-clip: text; */
+  /* -webkit-background-clip: text; */
+  /* color: transparent; */
+  font-size: 1.1rem;
+  color: white;
+  text-shadow: 2px 2px 3px rgb(6, 8, 72);
 }
 
 div a {

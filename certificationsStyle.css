@@ -158,6 +158,16 @@ section {
   box-shadow: 0 0 0 150px rgba(27, 54, 94, 0.6) inset;
 }
 
+.certification-one:hover,
+.certification-two:hover,
+.certification-three:hover,
+.certification-four:hover,
+.certification-five:hover,
+.certification-six:hover,
+.certification-seven:hover {
+  box-shadow: 6px 6px 2px 1px rgba(6, 8, 72, 0.6);
+}
+
 .certification-one {
   background-image: url(images/jsCert.jpg);
 }

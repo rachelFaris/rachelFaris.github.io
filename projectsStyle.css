@@ -22,12 +22,12 @@ nav a,
 footer p {
   font-family: "Nunito Sans", sans-serif;
   text-decoration: none;
-  color: rgb(193, 194, 205);
+  color: white;
   letter-spacing: 0.13rem;
 }
 
 nav a:hover {
-  background-color: rgb(42, 64, 97);
+  background-color: rgb(27, 57, 121);
 }
 
 span.link-letter {
@@ -65,6 +65,14 @@ main {
   grid-row: 2 / 7;
 }
 
+h1 {
+  font-family: "Orbitron", sans-serif;
+  color: #39f9f5;
+  margin: 2rem 0 6rem 0;
+  text-align: center;
+  letter-spacing: 0.215rem;
+}
+
 .section-container {
   display: flex;
   flex-wrap: wrap;
@@ -72,7 +80,7 @@ main {
 }
 
 section {
-  margin: 2rem;
+  margin: 1.5rem 2.5rem 4.5rem 2.5rem;
   width: 360px;
   height: 360px;
 }
@@ -194,7 +202,7 @@ border-thick {
 .project-four:hover,
 .project-five:hover {
   /* opacity: 0.8; */
-  box-shadow: 0 0 0 200px rgba(42, 64, 97, 0.93) inset;
+  box-shadow: 0 0 0 200px rgba(6, 8, 72, 0.87) inset;
   transition: 0.1s;
 }
 
@@ -214,6 +222,20 @@ border-thick {
 .project-five:hover h2 {
   opacity: 1;
   transform: scale(1);
+}
+
+.site-link-outside {
+  color: white;
+  font-size: 1.2rem;
+  margin: 0 0 0 2.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.right-align-link {
+  margin: 0;
+}
+.site-link-outside:hover {
+  color: #39f9f5;
 }
 
 .site-link {
@@ -282,6 +304,12 @@ footer p {
 }
 
 @media screen and (max-width: 640px) {
+  nav li {
+    margin-right: 2rem;
+  }
+  h1 {
+    font-size: 1rem;
+  }
   section {
     margin: 2rem;
     width: 220px;
@@ -301,5 +329,18 @@ footer p {
   .project-four:hover p,
   .project-five:hover p {
     font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 270px) {
+  nav li {
+    margin-right: 2rem;
+  }
+  .site-link-outside {
+    display: block;
+  }
+
+  .right-align-link {
+    display: block;
   }
 }
