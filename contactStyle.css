@@ -208,6 +208,9 @@ footer p {
   main {
     grid-row: 1 / auto;
   }
+  nav {
+    z-index: 1;
+  }
 
   span.social-icons {
     display: flex;
