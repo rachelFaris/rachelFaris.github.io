@@ -262,7 +262,7 @@ footer p {
 @media screen and (max-width: 900px) {
   nav {
     grid-column: 3;
-    margin-left: 5rem;
+    margin-left: 3rem;
   }
   nav li {
     display: block;
@@ -276,6 +276,13 @@ footer p {
     margin: 2rem;
     width: 300px;
     height: 300px;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+  .right-align-link {
+    display: block;
+    margin: 0.5rem 0 -1rem 0;
   }
   .project-one:hover h2,
   .project-two:hover h2,
@@ -296,19 +303,26 @@ footer p {
 }
 
 @media screen and (max-width: 740px) {
+  h1 {
+    margin: 1rem 0 2.5rem 0;
+  }
   section {
     margin: 2rem;
     width: 250px;
     height: 250px;
   }
+  nav {
+    margin-right: 1.5rem;
+  }
+  .site-link-outside,
+  .right-align-link {
+    font-size: 0.95rem;
+  }
 }
 
 @media screen and (max-width: 640px) {
-  nav li {
-    margin-right: 2rem;
-  }
   h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   section {
     margin: 2rem;
@@ -332,15 +346,9 @@ footer p {
   }
 }
 
-@media screen and (max-width: 270px) {
-  nav li {
-    margin-right: 2rem;
-  }
-  .site-link-outside {
-    display: block;
-  }
-
-  .right-align-link {
-    display: block;
+@media screen and (max-width: 380px) {
+  h1 {
+    font-size: 1.25rem;
+    margin: 0 1rem 1.75rem 1rem;
   }
 }

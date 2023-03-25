@@ -5,28 +5,28 @@
 html {
   margin: 0;
   font-size: 16px;
-  /* background: linear-gradient(rgb(6, 8, 72), rgb(57, 249, 245));
-  height: 100vh; */
+  background-color: rgb(57, 249, 245);
 }
 
 body {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-  /* gap: 10px; */
   grid-template-rows: repeat(6, 1fr);
-
-  /* grid-template-columns: repeat(6, 1fr); */
-  /* grid-template-rows: minmax(100px, auto); */
-
   background: linear-gradient(rgb(6, 8, 72), rgb(57, 249, 245));
   height: 100vh;
   margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* nav styles */
+header {
+  grid-column: 1;
+  grid-row: 1;
+}
+
 nav {
-  grid-column: 1 / 4;
+  grid-column: 2 / 4;
   grid-row: 1;
 }
 
@@ -54,7 +54,8 @@ span.link-letter {
   padding-right: 0.5rem;
 }
 
-li.logo {
+p.logo {
+  margin: 1rem 0 0 2.5rem;
   font-family: "Orbitron", sans-serif;
   font-size: 2.5rem;
   color: #39f9f5;
@@ -87,9 +88,7 @@ main {
 }
 
 div.projects {
-  grid-column: 2 / auto;
-  grid-row: 5 / auto;
-  margin: -4rem 0 0 0;
+  margin: 3rem 0 0 0;
 }
 
 .main-info {
@@ -111,8 +110,6 @@ div.projects {
 
 .cf3 img {
   position: absolute;
-  /* margin: 0 0 0 0.5rem; */
-  /* right: 0; */
 }
 
 .second-bottom {
@@ -156,7 +153,6 @@ h1 {
   margin: 1rem 0;
   font-family: "Nunito Sans", sans-serif;
   font-size: 5rem;
-  /* color: transparent; */
   color: white;
   letter-spacing: 0.1rem;
 }
@@ -167,14 +163,12 @@ h2 {
   font-size: 3rem;
   color: rgb(6, 8, 72);
   line-height: 2.6rem;
-  /* color: transparent; */
 }
 
 p.hello {
   display: inline-block;
   font-family: "Orbitron", sans-serif;
   letter-spacing: 0.15rem;
-  /* color: transparent; */
   color: #39f9f5;
   margin: 3rem 0 0 0;
   font-size: 0.95rem;
@@ -186,8 +180,7 @@ p.specialize {
   color: rgb(6, 8, 72);
   font-weight: 600;
   font-size: 1.1rem;
-  /* color: transparent; */
-  margin: 2rem 0;
+  margin: 1rem 0 0 0;
 }
 
 .andAnd {
@@ -233,8 +226,7 @@ footer p {
 
     grid-template-columns: 1fr 4fr 1fr;
     grid-auto-rows: minmax(100px, auto);
-    /* height: 100vh; */
-    min-height: 800px;
+    height: 100vh;
   }
 
   section {
@@ -243,7 +235,7 @@ footer p {
   }
 
   .avatar {
-    width: 25%;
+    width: 20%;
     height: auto;
     border: solid 1px #39f9f5;
     border-radius: 50%;
@@ -254,29 +246,29 @@ footer p {
 
     grid-row: 5 / auto;
     text-align: left;
-    /* margin: -7rem 0 0 3rem; */
+    margin: 3rem 0 0 3rem;
   }
-  div.projects {
-    grid-column: 2 / 3;
-    grid-row: 7;
-    /* margin: -3rem 0 0 3rem; */
-  }
+
   footer {
-    grid-row: 7;
-    /* background-color: transparent; */
+    grid-column: 3;
+    grid-row: 6;
+    font-size: 0.75rem;
   }
 }
+
+/* * {
+  border: 1px solid white;
+} */
+
 @media screen and (max-width: 1000px) {
   body {
-    display: grid;
-
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: minmax(100px, 200px);
-    min-height: 1000px;
+    grid-template-rows: minmax(100px, auto);
+    height: 100vh;
   }
   nav {
-    grid-column: 1;
-    /* margin-left: 5rem; */
+    grid-column: 3;
+    text-align: end;
+    margin: 0 1.5rem 0 0;
   }
   nav li {
     display: block;
@@ -287,38 +279,44 @@ footer p {
     margin: 1rem 0;
   }
   section {
-    grid-column: 1;
-    grid-row: 2;
-    /* margin: 0 0 1rem 5rem; */
+    position: relative;
+    top: -35px;
+    left: 200px;
   }
 
   .avatar {
-    width: 80%;
-    height: auto;
+    width: 30%;
   }
 
   main {
     grid-column: 2 / 4;
 
-    grid-row: 4 / auto;
+    grid-row: 3 / auto;
     text-align: left;
-    margin: -3rem 4rem 0 0;
+    margin: 3rem 4rem 0 0;
   }
-  div.projects {
-    grid-column: 2 / 3;
-    grid-row: 8;
-    margin: -5rem 0 0 0;
-  }
-
   footer {
     grid-row: 9;
-    background-color: transparent;
+    margin: -5rem 0 0 0;
   }
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 850px) {
+  body {
+    height: 100vh;
+  }
+  section {
+    left: 150px;
+  }
+  .avatar {
+    width: 35%;
+  }
   main {
-    margin: -2rem 3rem 0 0;
+    grid-column: 2 / 4;
+
+    grid-row: 4 / auto;
+    text-align: left;
+    margin: -2rem 4rem 0 0;
   }
 
   h1 {
@@ -330,118 +328,114 @@ footer p {
     margin: 0;
     font-size: 2rem;
   }
-  div.projects {
-    margin: -6rem 0 0 0;
-  }
+
   a.projects-button {
     font-size: 0.75rem;
     font-weight: 600;
   }
 }
 
-@media screen and (max-width: 650px) {
-  body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 10ch;
-    height: 100vh;
-  }
-
+@media screen and (max-width: 740px) {
   section {
-    grid-row: 3;
-    margin: -2rem 0 0 0;
+    position: relative;
+    top: 0px;
+    left: 150px;
   }
-
   .avatar {
-    width: 35%;
-    height: auto;
+    width: 40%;
   }
+}
 
+@media screen and (max-width: 600px) {
+  section {
+    position: relative;
+    top: 15px;
+    left: 100px;
+  }
+  .avatar {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 560px) {
   main {
-    grid-column: 1 / 4;
-    grid-row: 4 / auto;
-    margin: 0 2rem;
-    text-align: center;
-  }
-  div.projects {
-    grid-column: 1 / 4;
-    grid-row: 6;
-    margin: -9rem auto 0 auto;
-  }
-
-  footer {
-    grid-row: 6;
+    margin: -2rem 3rem 0 0;
   }
 }
 
 @media screen and (max-width: 500px) {
   body {
-    height: auto;
+    height: 100vh;
   }
-  section {
-    grid-column: 1;
-    grid-row: 3;
-    margin: -2rem 0 0 0;
-  }
-
-  .avatar {
-    width: 45%;
-    height: auto;
-  }
-  div.projects {
-    grid-row: 6;
-    margin: -6rem auto 0 auto;
+  main {
+    margin: -3rem 2rem 0 0;
   }
 }
 
-@media screen and (max-width: 400px) {
-  body {
-    /* margin: 0; */
-    height: auto;
-  }
-  main {
-    margin: -3rem 0 0 0;
-    text-align: right;
-  }
-
+@media screen and (max-width: 450px) {
   h1 {
-    margin: 1rem 0;
     font-size: 3rem;
   }
 
-  h2 {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-  div.projects {
-    text-align: right;
-    float: right;
-    margin: -6rem 2rem 0 0;
+  .avatar {
+    width: 80%;
   }
 }
 
-@media screen and (max-width: 300px) {
-  body {
-    margin: 0;
+@media screen and (max-width: 380px) {
+  section {
+    top: 30px;
+    left: 80px;
+  }
+  main {
+    margin: -3rem 0.5rem 0 0;
+  }
+  .avatar {
+    width: 100%;
     height: auto;
   }
-
-  main {
-    text-align: right;
-  }
-
   h1 {
-    margin: 1rem 0;
-    font-size: 2rem;
+    font-size: 3rem;
   }
+}
+@media screen and (max-width: 330px) {
+  section {
+    top: 50px;
+    left: 80px;
+  }
+  main {
+    margin: -5rem 0.5rem 0 0;
+  }
+  .avatar {
+    width: 120%;
+    height: auto;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}
 
-  h2 {
-    margin: 0;
-    font-size: 1.5rem;
+@media screen and (max-width: 295px) {
+  section {
+    top: 50px;
+    left: 60px;
   }
-  div.projects {
-    text-align: right;
-    float: right;
-    margin: -5rem 2rem 0 0;
+  main {
+    margin: -5rem 1rem 0 -0.75rem;
+  }
+  .avatar {
+    width: 420%;
+  }
+  h1 {
+    font-size: 2.3rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  a.projects-button {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    padding: 0.5rem;
   }
 }

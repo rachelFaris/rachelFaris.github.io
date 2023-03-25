@@ -1,5 +1,8 @@
 html {
   font-size: 16px;
+  background: linear-gradient(rgb(6, 8, 72), rgb(57, 249, 245));
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
 }
 
 body {
@@ -9,9 +12,8 @@ body {
   /* color: transparent; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
   grid-auto-rows: minmax(100px, auto);
-  background: linear-gradient(rgb(6, 8, 72), rgb(57, 249, 245));
+  /* background: linear-gradient(rgb(6, 8, 72), rgb(57, 249, 245)); */
   /* background-color: rgb(27, 54, 94); */
   margin: 0 auto;
   font-family: "Nunito Sans", sans-serif;
@@ -152,7 +154,7 @@ main {
   /* color: transparent; */
   font-size: 1.1rem;
   color: white;
-  text-shadow: 2px 2px 3px rgb(6, 8, 72);
+  text-shadow: 1px 2px 2px rgb(6, 8, 72);
 }
 
 div a {
@@ -198,13 +200,34 @@ footer p {
     margin: 1rem 0;
   }
   .bio-section a {
-    margin: 0 1.5rem 0 0;
+    margin: 0 3rem 0 0;
   }
 }
 
-@media screen and (max-width: 740px) {
-  .section-container {
-    display: block;
+@media screen and (max-width: 850px) {
+  main {
+    grid-row: 1 / auto;
+  }
+
+  span.social-icons {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 3rem;
+  }
+  /* a.contact-icon {
+    margin: 4rem;
+  } */
+  .image-section {
+    grid-column: 1 / 4;
+    grid-row: 1 / auto;
+  }
+
+  .bio-section {
+    grid-column: 1 / 4;
+    grid-row: auto;
+    margin: 0;
   }
   .image-section img {
     margin-top: 0.5rem;
@@ -216,9 +239,59 @@ footer p {
     text-align: left;
     font-size: 1.1rem;
     letter-spacing: 0.1rem;
-    overflow: scroll;
+    overflow: visible;
   }
   .bio-section a {
     margin: 0 0.5rem 0 0;
   }
+  footer {
+    grid-column: 1 / 4;
+    grid-row: 4;
+  }
 }
+@media screen and (max-width: 540px) {
+  main {
+    grid-row: 2 / auto;
+  }
+  .image-section {
+    grid-column: 1 / 4;
+    grid-row: 3 / auto;
+  }
+
+  .bio-section {
+    grid-column: 1 / 4;
+    grid-row: 4;
+    margin: 0 1.5rem;
+  }
+  footer {
+    grid-row: 9;
+  }
+  span.social-icons {
+    margin-bottom: 2rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    display: grid;
+    grid-template-columns: 1ch;
+    grid-auto-rows: minmax(100px, auto);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    width: 100vw;
+  }
+  main {
+    width: 100vw;
+  }
+  footer {
+    grid-row: 11;
+  }
+}
+
+/* * {
+  border: 1px solid white;
+} */
