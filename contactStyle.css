@@ -190,6 +190,7 @@ footer p {
   nav {
     grid-column: 3;
     margin-left: 5rem;
+    z-index: 1;
   }
   nav li {
     display: block;
@@ -207,9 +208,6 @@ footer p {
 @media screen and (max-width: 850px) {
   main {
     grid-row: 1 / auto;
-  }
-  nav {
-    z-index: 1;
   }
 
   span.social-icons {
