@@ -89,6 +89,8 @@ main {
 
 div.projects {
   margin: 3rem 0 0 0;
+  /* z-index: 1; */
+  position: relative;
 }
 
 .main-info {
